@@ -1,16 +1,15 @@
 
 import { Layers } from 'lucide-react';
+import { useSidebar } from '@/components/ui/sidebar';
 
-interface SidebarHeaderProps {
-  collapsed: boolean;
-  onToggle?: () => void;
-}
+const SidebarHeader = () => {
+  const { state, toggleSidebar } = useSidebar();
+  const collapsed = state === "collapsed";
 
-const SidebarHeader = ({ collapsed, onToggle }: SidebarHeaderProps) => {
   return (
     <div 
       className="h-16 flex items-center px-4 border-b border-sidebar-border cursor-pointer bg-sidebar w-full hover:bg-sidebar-accent/10 transition-colors"
-      onClick={onToggle}
+      onClick={toggleSidebar}
     >
       {collapsed ? (
         <div className="flex justify-center w-full">
