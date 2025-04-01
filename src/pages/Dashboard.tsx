@@ -17,7 +17,7 @@ const Dashboard = () => {
   };
   
   return (
-    <div className="space-y-6">
+    <div className="space-y-6 w-full max-w-full">
       <PageHeader 
         title="Dashboard" 
         description="Visão geral do seu negócio"
@@ -41,7 +41,7 @@ const Dashboard = () => {
         }
       />
       
-      <Tabs defaultValue="overview" className="space-y-4">
+      <Tabs defaultValue="overview" className="space-y-4 w-full">
         <div className="flex items-center justify-between mb-2">
           <TabsList className="mb-0">
             <TabsTrigger value="overview">Visão Geral</TabsTrigger>
